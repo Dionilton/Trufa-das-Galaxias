@@ -16,8 +16,8 @@ time.sleep(2)
 username = WebDriverWait(navegador, 10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "input[name='username']")))
 password = WebDriverWait(navegador, 10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "input[name='password']")))
 
-username.send_keys("$USER_EMAIL")
-password.send_keys("$USER_PASSWORD")
+username.send_keys("xxx")
+password.send_keys("xxx")
 time.sleep(1)
 navegador.find_element(By.XPATH, '//*[@id="loginForm"]/div/div[3]/button/div').click()
 
