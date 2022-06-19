@@ -1,6 +1,8 @@
-# Trufa das Galáxias
+## About
 
 Repositório criado a fim de desenvolver ferramentas que me auxilie na obtenção, visualização e análise de dados do meu novo empreendimento (venda de doces, mais especificamente bombons recheados popularmente conhecido como trufas).
+
+## Trufa das Galáxias
 
 A ideia surgiu com a necessidade de se obter uma renda extra, dessa forma, pensei em vender trufas na faculdade. Mas não ser apenas mais um vendedor de doces no campus da faculdade, meu objetivo é usar meu conheciemento adquerido na universidade e em estudos pessoais na área de programação, tecnologia e empreendedorismo para que eu possa desenvolver ferramentas que me ajude no meu pequeno negócio, ferramentas que vai além de uma planilha financeira no Excel.
 
