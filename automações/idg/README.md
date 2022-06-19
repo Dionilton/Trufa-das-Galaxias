@@ -34,4 +34,4 @@ Para que o Selenium funcione perfeitamente, além da instalação da biblioteca,
 
 Pronto, feito tudo isso, basta ajustar o código com suas especificações de XPATH, usuário e senha, e está pronto para rodar a aplicação.
 
-Vale ressaltar também, que essa aplicação ainda não está e pronta e segue em fase de testes para que seja feito os devidos ajustes e correção de bugs.
+Vale ressaltar também, que essa aplicação ainda não está pronta e segue em fase de testes para que seja feito os devidos ajustes e correção de bugs.
