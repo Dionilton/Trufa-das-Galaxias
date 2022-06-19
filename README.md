@@ -8,22 +8,22 @@ Meu objetivo é coletar dados de vendas e das redes sociais, visualizá-los e an
 
 Portanto, basicamente quero conduzir esse pequeno mas tecnológico empreendimento como uma "pequena empresa" e aplicar/testar os conceitos de Data Driving com ela utilizando as ferramentas que será desenvolvido aqui nesse repositório.
 
-# 1 - Ferramentas
+## Ferramentas
 
-A principio será desenvolvidas 3 ferramentas, sendo elas:
+A principio serão desenvolvidas 3 ferramentas, sendo elas:
 
-## 2 - Insta Data Get - IDG
+### 1 - Insta Data Get - IDG
 
 Ferramenta para coleta de dados do perfil do Instagram institucional.
 
-## 3 - App_Vendas
+### 2 - App_Vendas
 
 Aplicativo para coletar dados durante as vendas das trufas.
 
-## Data Science Center - DSC
+### 3 - Data Science Center - DSC
 
 Central com um conjunto de ferramentas para visualização e análise de dados, integra também ferramentas de Machine Learn e Data Science
 
-# Observações finais
+## Observações finais
 
-Vale ressaltar também que um dos principais objetivos desse projeto é a aprendizagem, busco obter novos conhecimentos, seja eles especificações da linguagem (Python), bibliotecas, frameworks, APIs, banco de dados, mobile e tudo que possibilite a implementação de todos os escopos do projeto com o intuito de se ter uma aprendizagem significativa em um projeto prático e funcional para os meus objetivos.
+Vale ressaltar também que um dos principais objetivos desse projeto é a aprendizagem, busco obter novos conhecimentos, seja eles especificações da linguagem (Python), bibliotecas, frameworks, APIs, banco de dados, mobile e tudo que possibilite a implementação de todos os escopos do projeto com o intuito de ter uma aprendizagem significativa em um projeto prático e funcional para os meus objetivos.
