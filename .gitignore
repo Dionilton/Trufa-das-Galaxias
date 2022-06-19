@@ -14,6 +14,7 @@ profile_default/
 ipython_config.py
 
 .idea
+.env
 
 # Remove previous ipynb_checkpoints
 #   git rm -r .ipynb_checkpoints/
