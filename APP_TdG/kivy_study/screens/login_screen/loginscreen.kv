@@ -1,0 +1,15 @@
+<LoginScreen>
+
+    MDBoxLayout:
+        orientation: "vertical"
+
+        MDToolbar:
+            title: "App de Vendas"
+            elevation: 10
+            left_action_items: [["menu", lambda x: app.callback()]]
+            md_bg_color: app.theme_cls.accent_color
+
+        MDLabel:
+            text: "Olá HotReload"
+            bold: True
+            halign: "center"
