@@ -1,15 +1,76 @@
 <LoginScreen>
 
-    MDBoxLayout:
-        orientation: "vertical"
+    FloatLayout:
 
         MDToolbar:
-            title: "App de Vendas"
-            elevation: 10
-            left_action_items: [["menu", lambda x: app.callback()]]
-            md_bg_color: app.theme_cls.accent_color
+            md_bg_color: 1,1,1,1
+            specific_text_color: app.theme_cls.primary_color
+            text: "Nome da Aplicação"
+            pos_hint: {"top": 1}
+            elevation: 0
+            left_action_items: [["arrow-left", lambda x: root.callback()]]
+
+        Image:
+            source: 'images/loginIcon.png'
+            size_hint: (0.5, 0.5)
+            pos_hint: {'center_x': 0.5, 'center_y': 0.85}
 
         MDLabel:
-            text: "Olá HotReload"
+            text: 'Seja bem vindo!'
+            font_style: 'H5'
             bold: True
-            halign: "center"
+            halign: 'center'
+            pos_hint: {'center_x': 0.5, 'center_y': 0.68}
+
+        MDLabel:
+            text: 'faça o login para continuar'
+            font_style: 'Caption'
+            bold: True
+            halign: 'center'
+            pos_hint: {'center_x': 0.5, 'center_y': 0.64}
+
+        MDTextField:
+            hint_text: "E-mail"
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+            size_hint_x: .8
+            icon_right: "email"
+            icon_right_color: app.theme_cls.primary_color
+
+        MDTextField:
+            hint_text: "Senha"
+            pos_hint: {'center_x': 0.5, 'center_y': 0.42}
+            size_hint_x: .8
+            password: True
+            icon_right: "lock"
+            icon_right_color: app.theme_cls.primary_color
+
+        MDFillRoundFlatButton:
+            text: 'Entrar'
+            font_size: 20
+            elevation: 8
+            text_color: 1,1,1,0.99
+            pos_hint: {'center_x': 0.5, 'center_y': 0.3}
+            size_hint_x: .8
+
+        MDFillRoundFlatButton:
+            text: 'Entrar com o Facebook'
+            font_size: 20
+            elevation: 8
+            text_color: 1,1,1,0.99
+            md_bg_color: 0.18, 0.53, 1,1
+            pos_hint: {'center_x': 0.5, 'center_y': 0.22}
+            size_hint_x: .8
+
+        MDFillRoundFlatButton:
+            text: 'Entrar com o Google'
+            font_size: 20
+            elevation: 8
+            text_color: 1,1,1,0.99
+            md_bg_color: 0.89, 0.25, 0.20,1
+            pos_hint: {'center_x': 0.5, 'center_y': 0.14}
+            size_hint_x: .8
+
+        MDTextButton:
+            text: "Esqueci minha senha"
+            font_size: 14
+            pos_hint: {'center_x': 0.5, 'center_y': 0.05}

@@ -32,7 +32,7 @@ class LiveApp(MDApp, App):
 
 
     def build_app(self):
-
+        self.theme_cls.primary_palette = "Yellow"
         return Factory.MainScreenManager()
 
 
