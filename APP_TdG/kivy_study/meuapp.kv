@@ -1,0 +1,84 @@
+JanelaGerenciadora:
+    JanelaLogin:
+    JanelaPrincipal:
+    JanelaError:
+
+<JanelaLogin>:
+    name: "login"
+
+    FloatLayout:
+        MDToolbar:
+            md_bg_color: 1,1,0,0.99
+            text: "Login"
+            pos_hint: {"top": 1}
+            elevation: 0
+            left_action_items: [["menu"]]
+
+        MDRaisedButton:
+            text: "Entrar"
+            pos_hint: {'center_x': 0.5, 'center_y': 0.3}
+            on_release: app.isUser()
+
+        Image:
+            source: 'loginIcon.png'
+            size_hint: (0.5, 0.5)
+            pos_hint: {'center_x': 0.5, 'center_y': 0.83}
+
+        MDLabel:
+            text: 'Bem vindo!'
+            font_style: 'H5'
+            bold: True
+            halign: 'center'
+            pos_hint: {'center_x': 0.5, 'center_y': 0.68}
+
+        MDLabel:
+            text: 'Faça login para continuar'
+            font_style: 'Caption'
+            bold: True
+            halign: 'center'
+            pos_hint: {'center_x': 0.5, 'center_y': 0.64}
+
+        MDTextField:
+            hint_text: 'Usuário'
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+            size_hint_x: .8
+            icon_right: 'account'
+            icon_right_color: app.theme_cls.primary_color
+
+        MDTextField:
+            hint_text: 'Senha'
+            pos_hint: {'center_x': 0.5, 'center_y': 0.42}
+            size_hint_x: .8
+            password: True
+            icon_right: 'lock'
+            icon_right_color: app.theme_cls.primary_color
+
+
+
+<JanelaError>:
+    name: "error"
+
+    FloatLayout:
+        MDLabel:
+            text: "Usuario ou senha incorreto, tente novamente"
+            halign: "center"
+        MDRaisedButton:
+            text: "Entrar"
+            pos_hint: {'center_x': 0.5, 'center_y': 0.3}
+            on_release: app.isUser()
+
+<JanelaPrincipal>:
+    name: "principal"
+
+    FloatLayout:
+        MDToolbar:
+            md_bg_color: 1,1,0,0.99
+            text: "Login"
+            pos_hint: {"top": 1}
+            elevation: 0
+            left_action_items: [["menu"]]
+
+        MDLabel:
+            text: "login feito com sucesso"
+            halign: "center"
+
