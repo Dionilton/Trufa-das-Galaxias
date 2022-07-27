@@ -23,8 +23,8 @@ class MeuApp(MDApp):
         self.root.transition = NoTransition()
         self.theme_cls.primary_palette = 'Yellow'
 
-    def isUser(self):
-        if 7 > 5:
+    def isAuthenticated(self):
+        if 7 > 12:
             self.root.current = 'principal'
         else:
             self.root.current = "error"
