@@ -4,7 +4,6 @@ from kivy.uix.screenmanager import Screen, ScreenManager, NoTransition
 import psycopg2 as pg
 from sqlalchemy import create_engine
 import pandas as pd
-from dotenv import load_dotenv
 import os
 
 dotenv.load_dotenv(dotenv.find_dotenv())
