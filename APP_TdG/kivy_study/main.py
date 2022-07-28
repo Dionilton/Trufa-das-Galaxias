@@ -33,9 +33,9 @@ class JanelaPrincipal(Screen):
 
 class MeuApp(MDApp):
     def build(self):
-        self.root.transition = NoTransition()
-        self.theme_cls.primary_palette = 'Yellow'
-        self.title = "Login System Test"
+        #self.root.transition = NoTransition()
+        self.theme_cls.primary_palette = 'Purple'
+        self.title = "Trufa das Galáxias - APP"
 
     def isAuthenticated(self):
         user = self.root.get_screen('login').ids.user.text

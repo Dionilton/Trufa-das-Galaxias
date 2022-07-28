@@ -8,12 +8,8 @@ JanelaManage:
 
     FloatLayout:
         MDToolbar:
-            md_bg_color: 1,1,0,0.99
-            text: "Login"
             pos_hint: {"top": 1}
             elevation: 0
-            left_action_items: [["menu"]]
-
 
         Image:
             source: 'loginIcon.png'
@@ -64,7 +60,13 @@ JanelaManage:
             font_style: 'Caption'
             bold: True
             halign: 'center'
-            pos_hint: {'center_x': 0.5, 'center_y': 0.18}
+            pos_hint: {'center_x': 0.5, 'center_y': 0.22}
+
+        Image:
+            source: 'logo.png'
+            size_hint: (0.6, 0.6)
+            pos_hint: {'center_x': 0.5, 'center_y': 0.08}
+
 
 
 
