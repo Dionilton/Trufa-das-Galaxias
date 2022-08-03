@@ -1,4 +1,5 @@
 import dotenv
+from datetime import datetime, date
 from kivymd.app import MDApp
 from kivy.uix.screenmanager import Screen, ScreenManager, NoTransition
 from kivymd.uix.menu import MDDropdownMenu
@@ -131,7 +132,21 @@ class MeuApp(MDApp):
         self.root.current = 'login'
 
     def cadastrarVenda(self):
-        pass
+        if self.root.get_screen('principal').ids.drop_itemSab.text != 'Escolha o sabor' and self.root.get_screen('principal').ids.drop_itemQtd.text != 'Escolha a quantidade' and self.root.get_screen('principal').ids.drop_itemPag.text != 'Escolha a forma de pagamento':
+            venda = [self.root.get_screen('principal').ids.drop_itemSab.text,
+                     self.root.get_screen('principal').ids.drop_itemQtd.text,
+                     self.root.get_screen('principal').ids.drop_itemPag.text]
+            data = date.today()
+            data_em_texto = f'{data.day}/{data.month}/{data.year}'
+            now = datetime.now()
+            hora_texto = f'{now.hour}:{now.minute}:{int(now.second)}'
+            venda.append(data_em_texto)
+            venda.append(hora_texto)
+            venda.append(None)
+            venda.append(self.root.get_screen('principal').ids.id_nome.text.split()[2])
+            print(venda)
+        else:
+            self.root.get_screen('principal').ids.aviso.text = 'marque todos os campos'
 
 
 MeuApp().run()

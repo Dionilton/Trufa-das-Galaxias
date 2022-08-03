@@ -100,7 +100,7 @@ JanelaManage:
         MDRectangleFlatIconButton:
             icon: "candycane"
             id: drop_itemSab
-            pos_hint: {'center_x': 0.5, 'center_y': 0.70}
+            pos_hint: {'center_x': 0.5, 'center_y': 0.75}
             size_hint: (0.95, 0.15)
             text: 'Escolha o sabor'
             line_color: [1,0,1,1]
@@ -109,7 +109,7 @@ JanelaManage:
         MDRectangleFlatIconButton:
             icon: "math-integral"
             id: drop_itemQtd
-            pos_hint: {'center_x': 0.5, 'center_y': 0.50}
+            pos_hint: {'center_x': 0.5, 'center_y': 0.55}
             size_hint: (0.95, 0.15)
             text: 'Escolha a quantidade'
             line_color: [1,0,1,1]
@@ -118,7 +118,7 @@ JanelaManage:
         MDRectangleFlatIconButton:
             icon: "credit-card"
             id: drop_itemPag
-            pos_hint: {'center_x': 0.5, 'center_y': 0.30}
+            pos_hint: {'center_x': 0.5, 'center_y': 0.35}
             size_hint: (0.95, 0.15)
             text: 'Escolha a forma de pagamento'
             line_color: [1,0,1,1]
@@ -127,3 +127,13 @@ JanelaManage:
         MDRaisedButton:
             text: "Cadastrar Venda"
             pos_hint: {'center_x': 0.5, 'center_y': 0.12}
+            on_release: app.cadastrarVenda()
+
+        MDLabel:
+            id: aviso
+            text: ""
+            halign: "center"
+            pos_hint: {'center_y': 0.22}
+            font_style: 'Caption'
+            bold: True
+            color: (1, 0, 0, 1)
