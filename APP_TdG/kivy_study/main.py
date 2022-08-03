@@ -33,7 +33,7 @@ class JanelaPrincipal(Screen):
 
 class MeuApp(MDApp):
     def build(self):
-        #self.root.transition = NoTransition()
+        # self.root.transition = NoTransition()
         self.theme_cls.primary_palette = 'Purple'
         self.title = "Trufa das Galáxias - APP"
 
@@ -44,10 +44,14 @@ class MeuApp(MDApp):
             data = df.loc[df.usuario == user]
             if password == data['senha'].values[0]:
                 self.root.current = 'principal'
+                self.root.get_screen('principal').ids.id_nome.text = f"Logado com: {data['nome'].values[0]}"
             else:
                 self.root.get_screen('login').ids.msg.text = 'Usuário ou senha incorreto. Tente novamente!'
         else:
             self.root.get_screen('login').ids.msg.text = 'Usuário ou senha incorreto. Tente novamente!'
+
+    def returnLogin(self):
+        self.root.current = 'login'
 
 
 MeuApp().run()

@@ -75,12 +75,28 @@ JanelaManage:
     FloatLayout:
         MDToolbar:
             md_bg_color: 1,1,0,0.99
-            text: "Login"
+            title: "Menu Vendas"
             pos_hint: {"top": 1}
             elevation: 0
-            left_action_items: [["menu"]]
+            right_action_items: [["account-check"]]
+
+
+        MDIconButton:
+            icon: "arrow-left-bold-circle"
+            pos_hint: {'center_x': 0.95, 'center_y': 0.022}
+            theme_text_color: "Custom"
+            text_color:  app.theme_cls.primary_color
+            on_release: app.returnLogin()
 
         MDLabel:
-            text: "login feito com sucesso"
+            id: id_nome
+            text: ""
             halign: "center"
+            pos_hint: {'center_y': 0.022}
+            font_style: 'Caption'
+            color: (182/255, 66/255, 245/255, 1)
 
+
+        MDRaisedButton:
+            text: "Cadastrar Venda"
+            pos_hint: {'center_x': 0.5, 'center_y': 0.15}
