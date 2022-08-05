@@ -12,8 +12,6 @@ from sqlalchemy import create_engine
 import pandas as pd
 import os
 
-
-
 dotenv.load_dotenv(dotenv.find_dotenv())
 
 str_conn = os.getenv("str_conn")
@@ -53,13 +51,13 @@ class MeuApp(MDApp):
         seq = (str(kwargs['lat']), str(kwargs['lon']))
         self.stringGPS = s.join(seq)
 
-
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.flagExistGPS = None
         self.gps = None
         self.itemsSab = None
         self.itemsPag = None
+        self.itemsQtd = None
         self.menuSab = None
         self.menuPag = None
         self.itemQtd = None
@@ -69,7 +67,7 @@ class MeuApp(MDApp):
 
     def build(self):
         # self.root.transition = NoTransition()
-        #self.root.current = 'sucesso'
+        # self.root.current = 'sucesso'
         Window.size = (360, 640)
         self.gps = gps
         self.statusGPS = ''
@@ -93,7 +91,6 @@ class MeuApp(MDApp):
             self.statusMSG = 'GPS Configurado'
         elif self.flagExistGPS == 0:
             self.statusMSG = 'Impossível confidurar o GPS'
-
 
         menu_itemsSab = [
             {
@@ -180,9 +177,10 @@ class MeuApp(MDApp):
 
         self.root.current = 'login'
 
-
     def cadastrarVenda(self):
-        if self.root.get_screen('principal').ids.drop_itemSab.text != 'Escolha o sabor' and self.root.get_screen('principal').ids.drop_itemQtd.text != 'Escolha a quantidade' and self.root.get_screen('principal').ids.drop_itemPag.text != 'Escolha a forma de pagamento':
+        if self.root.get_screen('principal').ids.drop_itemSab.text != 'Escolha o sabor' and self.root.get_screen(
+                'principal').ids.drop_itemQtd.text != 'Escolha a quantidade' and self.root.get_screen(
+                'principal').ids.drop_itemPag.text != 'Escolha a forma de pagamento':
             venda = [self.root.get_screen('principal').ids.drop_itemSab.text,
                      int(self.root.get_screen('principal').ids.drop_itemQtd.text),
                      self.root.get_screen('principal').ids.drop_itemPag.text]
@@ -190,8 +188,8 @@ class MeuApp(MDApp):
             data_em_texto = f'{data.day}/{data.month}/{data.year}'
             now = datetime.now()
             hora_texto = f'{now.hour}:{now.minute}:{int(now.second)}'
-            venda.append(data_em_texto)
             venda.append(hora_texto)
+            venda.append(data_em_texto)
             self.ligaGPS()
             venda.append(self.stringGPS)
             venda.append(self.root.get_screen('principal').ids.id_nome.text.split()[2])
@@ -200,8 +198,7 @@ class MeuApp(MDApp):
             self.root.current = 'sucesso'
 
         else:
-            self.root.get_screen('principal').ids.aviso.text = 'marque todos os campos'
-
+            self.root.get_screen('principal').ids.aviso.text = 'selecione todos os campos'
 
     def novaVenda(self):
         self.root.get_screen('principal').ids.drop_itemSab.text = 'Escolha o sabor'
@@ -230,7 +227,6 @@ class MeuApp(MDApp):
         else:
             self.statusMSG = 'Sem GPS- Erro1'
             self.root.get_screen('principal').ids.aviso.text = self.statusMSG
-
 
 
 MeuApp().run()
