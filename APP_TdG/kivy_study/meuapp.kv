@@ -4,6 +4,8 @@ JanelaManage:
         name: 'login'
     JanelaPrincipal:
         name: 'principal'
+    JanelaSucesso:
+        name: 'sucesso'
 
 <JanelaLogin>:
 
@@ -133,7 +135,64 @@ JanelaManage:
             id: aviso
             text: ""
             halign: "center"
-            pos_hint: {'center_y': 0.22}
+            pos_hint: {'center_y': 0.21}
             font_style: 'Caption'
             bold: True
             color: (1, 0, 0, 1)
+
+
+<JanelaSucesso>:
+
+    FloatLayout:
+        MDToolbar:
+            md_bg_color: 1,1,0,0.99
+            title: "Sucesso!"
+            pos_hint: {"top": 1}
+            elevation: 0
+            right_action_items: [["account-check"]]
+
+        Image:
+            source: 'joia.jpg'
+            size_hint: (0.7, 0.7)
+            pos_hint: {'center_x': 0.5, 'center_y': 0.72}
+
+        MDIconButton:
+            icon: "arrow-left-bold-circle"
+            pos_hint: {'center_x': 0.95, 'center_y': 0.022}
+            theme_text_color: "Custom"
+            text_color:  app.theme_cls.primary_color
+            on_release: app.returnLogin()
+
+        MDLabel:
+            id: id_nome2
+            text: ""
+            halign: "center"
+            pos_hint: {'center_y': 0.022}
+            font_style: 'Caption'
+            color: (182/255, 66/255, 245/255, 1)
+
+        MDLabel:
+            text: "Venda cadastrada com sucesso!!!"
+            bold: True
+            halign: "center"
+            font_style: 'H5'
+            theme_text_color: "Custom"
+            text_color: 182/255, 66/255, 245/255, 1
+
+        MDIcon:
+            icon: "check-bold"
+            font_size: 75
+            halign: "center"
+            pos_hint: {"center_x": .5, "center_y": .38}
+            theme_text_color: "Custom"
+            text_color: app.theme_cls.primary_color
+
+        MDRaisedButton:
+            text: "Nova Venda"
+            text_color: 0,1,0.5,1
+            bold: True
+            font_style: 'H6'
+            pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+            size_hint: (0.85, 0.08)
+            on_release: app.novaVenda()
+
