@@ -1,0 +1,45 @@
+#:import toast kivymd.toast.toast
+JanelaManage:
+    HelloWorld:
+        name: 'hw'
+
+<HelloWorld>:
+
+    FloatLayout:
+        MDToolbar:
+            pos_hint: {"top": 1}
+            elevation: 0
+        MDLabel:
+            id: ola
+            halign: "center"
+            valign: "center"
+            text: ""
+            bold: True
+            color: app.theme_cls.primary_color
+            font_style: 'H4'
+        MDLabel:
+            id: h
+            pos_hint: {"center_x": 0.5, "center_y": 0.4}
+            halign: "center"
+            text: ""
+            color: app.theme_cls.primary_color
+            font_style: 'H5'
+        MDLabel:
+            id: d
+            pos_hint: {"center_x": 0.5, "center_y": 0.3}
+            halign: "center"
+            text: ""
+            color: app.theme_cls.primary_color
+            font_style: 'H5'
+        MDRaisedButton:
+            text: "Clique aqui!"
+            pos_hint: {"center_x": 0.5, "center_y": 0.8}
+            on_release: app.ola()
+        MDLabel:
+            id: nome
+            pos_hint: {"center_x": 0.5, "center_y": 0.05}
+            halign: "center"
+            text: "By: Dionilton"
+            color: app.theme_cls.primary_color
+            bold: True
+            font_style: 'Caption'
