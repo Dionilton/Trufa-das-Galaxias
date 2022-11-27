@@ -19,5 +19,7 @@ class MeuApp(MDApp):
         self.root.get_screen("hw").ids.ola.text = "Olá Mundo!"
         self.theme_cls.primary_palette = 'Purple'
 
+        #dale dele dolly
+
 
 MeuApp().run()
