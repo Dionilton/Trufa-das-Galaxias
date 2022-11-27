@@ -15,11 +15,10 @@ ipython_config.py
 
 .idea
 .env
-<<<<<<< HEAD
+
 .APP_TdG/Kivy_HW/
-=======
 .Kivy_HW/
->>>>>>> b3788df74efdb7763148ee39b670791973362324
+
 
 # Remove previous ipynb_checkpoints
 #   git rm -r .ipynb_checkpoints/
