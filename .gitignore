@@ -17,6 +17,7 @@ ipython_config.py
 .env
 .Kivy_HW/
 
+
 # Remove previous ipynb_checkpoints
 #   git rm -r .ipynb_checkpoints/
 
