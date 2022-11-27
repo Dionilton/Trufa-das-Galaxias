@@ -3,6 +3,7 @@ from datetime import date, datetime
 
 import dotenv
 import pandas as pd
+import psycopg2
 import psycopg2 as pg
 from kivy.clock import mainthread
 from kivy.core.window import Window
@@ -216,6 +217,7 @@ class MeuApp(MDApp):
         self.root.current = 'login'
 
     def cadastrarVenda(self):
+        global engine
         if (
             self.root.get_screen('principal').ids.drop_itemSab.text
             != 'Escolha o sabor'
@@ -240,10 +242,18 @@ class MeuApp(MDApp):
             venda.append(
                 self.root.get_screen('principal').ids.id_nome.text.split()[2]
             )
-            print(venda)
+            #print(venda) #para o desenvolvedor
             sql_venda = f"INSERT INTO tbvendas (sabor, quantidade, pagamento, hora, _data, _local, vendedor) VALUES ('{venda[0]}', {venda[1]}, '{venda[2]}', '{venda[3]}', '{venda[4]}', '{venda[5]}', '{venda[6]}');"
-            print(sql_venda)
-            engine.execute(sql_venda)
+            #print(sql_venda) #para o desenvolvedor
+
+            try:
+                engine.execute(sql_venda)
+            except:
+                engine = create_engine(str_conn)
+                engine.execute(sql_venda)
+
+
+
             self.root.current = 'sucesso'
 
         else:
