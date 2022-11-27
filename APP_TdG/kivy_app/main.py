@@ -242,9 +242,9 @@ class MeuApp(MDApp):
             venda.append(
                 self.root.get_screen('principal').ids.id_nome.text.split()[2]
             )
-            print(venda) #para o desenvolvedor
+            #print(venda) #para o desenvolvedor
             sql_venda = f"INSERT INTO tbvendas (sabor, quantidade, pagamento, hora, _data, _local, vendedor) VALUES ('{venda[0]}', {venda[1]}, '{venda[2]}', '{venda[3]}', '{venda[4]}', '{venda[5]}', '{venda[6]}');"
-            print(sql_venda) #para o desenvolvedor
+            #print(sql_venda) #para o desenvolvedor
 
             try:
                 engine.execute(sql_venda)
