@@ -7,7 +7,7 @@ import psycopg2
 import psycopg2 as pg
 from kivy.clock import mainthread
 from kivy.core.window import Window
-from kivy.uix.screenmanager import NoTransition, Screen, ScreenManager
+from kivy.uix.screenmanager import WipeTransition, Screen, ScreenManager
 from kivymd.app import MDApp
 from kivymd.uix.menu import MDDropdownMenu
 from plyer import gps
@@ -67,8 +67,7 @@ class MeuApp(MDApp):
         self.statusMSG = None
 
     def build(self):
-        # self.root.transition = NoTransition()
-        # self.root.current = 'sucesso'
+        #self.root.transition = WipeTransition()
         Window.size = (360, 640)
         self.gps = gps
         self.statusGPS = ''

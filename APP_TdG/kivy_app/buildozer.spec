@@ -9,6 +9,7 @@ version = 0.1
 requirements = python3, kivy, kivymd
 orientation = portrait
 fullscreen = 0
+presplash.filename = images/splash.jfif
 #android.permissions = INTERNET
 android.archs = arm64-v8a, armeabi-v7a
 
