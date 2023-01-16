@@ -1,6 +1,6 @@
 ## Aplicativo de Vendas - TdG
 
-Nesse parte do repositório Trufa-das-Galaxias, que compõe as tecnologias usadas no empreendimento, foi implementado um aplicativo feito em Python com a biblioteca Kivy/KivyMD afim de ter algo móvel que me auxilie a coletar os dados de venda durante as vendas na universidade.
+Nesse parte do repositório Trufa-das-Galaxias, que compõe as tecnologias usadas no empreendimento, foi implementado um aplicativo feito em Python com a biblioteca Kivy/KivyMD a fim de ter algo móvel que me auxilie a coletar os dados de venda durante as vendas na universidade.
 
 Sua interface e funcionamento pode ser conferida no GIF abaixo:
 
